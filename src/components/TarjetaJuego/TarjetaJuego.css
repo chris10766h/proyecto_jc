@@ -1,0 +1,62 @@
+.info-reseñas {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  padding: 8px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  font-size: 11px;
+}
+
+.contador-reseñas, .puntuacion-promedio {
+  font-weight: 600;
+}
+
+.contador-reseñas {
+  color: #3498db;
+}
+
+.puntuacion-promedio {
+  color: #f39c12;
+}
+
+.acciones-tarjeta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.btn-reseñas {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 6px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 10px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.btn-reseñas:hover {
+  background: #2980b9;
+  transform: translateY(-1px);
+}
+
+.btn-reseña-agregar {
+  background: #f39c12;
+  color: white;
+  border: none;
+  padding: 6px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 10px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.btn-reseña-agregar:hover {
+  background: #e67e22;
+  transform: translateY(-1px);
+}

@@ -1,0 +1,196 @@
+.modal-reseñas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-contenido {
+  background: white;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #ecf0f1;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 15px 15px 0 0;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 1.3em;
+}
+
+.btn-cerrar {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5em;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.btn-cerrar:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.lista-reseñas {
+  padding: 20px;
+}
+
+.reseña-item {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-left: 4px solid #3498db;
+}
+
+.reseña-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.puntuacion {
+  font-size: 1.1em;
+}
+
+.puntuacion-numero {
+  font-size: 0.8em;
+  color: #7f8c8d;
+  margin-left: 8px;
+}
+
+.reseña-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.horas {
+  font-size: 0.8em;
+  color: #7f8c8d;
+  background: #ecf0f1;
+  padding: 3px 8px;
+  border-radius: 12px;
+}
+
+.dificultad {
+  font-size: 0.7em;
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+
+.dificultad.fácil {
+  background: #27ae60;
+  color: white;
+}
+
+.dificultad.normal {
+  background: #f39c12;
+  color: white;
+}
+
+.dificultad.difícil {
+  background: #e74c3c;
+  color: white;
+}
+
+.texto-reseña {
+  margin: 10px 0;
+  line-height: 1.5;
+  color: #2c3e50;
+}
+
+.reseña-footer {
+  margin-top: 10px;
+}
+
+.recomendacion {
+  font-size: 0.8em;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.recomendacion.si {
+  background: #d5f4e6;
+  color: #27ae60;
+}
+
+.recomendacion.no {
+  background: #fadbd8;
+  color: #e74c3c;
+}
+
+.sin-reseñas {
+  text-align: center;
+  padding: 40px 20px;
+  color: #7f8c8d;
+}
+
+.sin-reseñas p {
+  margin: 5px 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-contenido {
+    width: 95%;
+    margin: 10px;
+  }
+  
+  .reseña-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .reseña-meta {
+    align-items: flex-start;
+  }
+}
